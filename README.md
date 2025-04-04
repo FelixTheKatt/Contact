@@ -14,7 +14,7 @@ Application de gestion de contacts simple développée en .NET MAUI, avec persis
 
 ## Stack utilisée
 
-- [.NET MAUI (.NET 8 LTS)](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
+- [.NET MAUI (.NET 9)](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)
 - C#
 - SQL Server LocalDB
 - Entity Framework Core
