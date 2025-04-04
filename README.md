@@ -20,4 +20,5 @@ Application de gestion de contacts simple développée en .NET MAUI, avec persis
 - Entity Framework Core
 - Visual Studio 2022
 
-🎥 Ajout de la démo vidéo dans ./Contact/Demo/demo.mp4
+📽️ Télécharger et regarder la démo complète :  
+➡️ [Clique ici pour voir la démonstration (demo.mp4)](./Contact/Demo/demo.mp4)
