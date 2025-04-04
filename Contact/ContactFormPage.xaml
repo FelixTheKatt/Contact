@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contact.ContactFormPage"
+             Title="Ajouter un contact">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Nouveau Contact" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Entry x:Name="FirstNameEntry" Placeholder="Prénom" TextChanged="FirstNameEntry_TextChanged"/>
+            <Label x:Name="FirstNameError" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="LastNameEntry" Placeholder="Nom" TextChanged="LastNameEntry_TextChanged"/>
+            <Label x:Name="LastNameError" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" TextChanged="EmailEntry_TextChanged"/>
+            <Label x:Name="EmailError" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <!--
+                Zone téléphone : Picker + Entry côte à côte
+                Utilise un Grid avec 3 colonnes :
+                - Auto : pour le Picker (indicatif)
+                - 10   : pour l'espacement fixe entre les deux
+                - *    : pour que l'Entry prenne tout l'espace restant
+                Objectif : garder un alignement fluide, mieux que 
+                <HorizontalStackLayout Spacing="10">
+            -->
+            <Grid ColumnDefinitions="Auto,10,*" Margin="0,5">
+                <Picker x:Name="CountryCodePicker"
+                    WidthRequest="100"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="CountryCodePicker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>+32</x:String>
+                        <x:String>+33</x:String>
+                        <x:String>+49</x:String>
+                        <x:String>+1</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Entry x:Name="PhoneEntry"
+                   Grid.Column="2"
+                   Placeholder="Numéro de téléphone"
+                   Keyboard="Telephone"
+                   TextChanged="PhoneEntry_TextChanged"
+                   VerticalOptions="Center"
+                   HeightRequest="40"/> 
+            </Grid>
+            
+            <Label x:Name="PhoneError" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Entry x:Name="AddressEntry" Placeholder="Adresse" TextChanged="AddressEntry_TextChanged"/>
+            <Label x:Name="AddressError" TextColor="Red" IsVisible="False" FontSize="12"/>
+
+            <Button Text="Enregistrer"
+                    BackgroundColor="DarkSlateBlue"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Clicked="OnSaveClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

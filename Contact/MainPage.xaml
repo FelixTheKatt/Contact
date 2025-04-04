@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contact.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="25" VerticalOptions="Center">
+
+        <Label Text="Gestionnaire de Contacts"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Ajoutez, modifiez ou supprimez des contacts."
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="Gray" />
+
+        <Button Text="Ajouter un contact"
+                BackgroundColor="DarkSlateBlue"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnGoToFormClicked" />
+
+        <Button Text="Voir les contacts"
+                BackgroundColor="SlateBlue"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnGoToListClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
