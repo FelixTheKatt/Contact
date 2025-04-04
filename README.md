@@ -19,3 +19,5 @@ Application de gestion de contacts simple développée en .NET MAUI, avec persis
 - SQL Server LocalDB
 - Entity Framework Core
 - Visual Studio 2022
+
+🎥 Ajout de la démo vidéo dans /Contact/Demo/demo.mp4
