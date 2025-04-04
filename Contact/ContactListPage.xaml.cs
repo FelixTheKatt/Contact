@@ -1,6 +1,5 @@
 using Contact.Services;
 using Contact.Models;
-using System.Collections.ObjectModel;
 
 namespace Contact;
 
@@ -50,6 +49,12 @@ public partial class ContactListPage : ContentPage
                 LoadContacts(); // rechargement
             }
         }
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        LoadContacts(); // ? recharge systématique quand la page réapparaît
     }
 
 }
